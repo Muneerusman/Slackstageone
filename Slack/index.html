@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Slack</title>
+</head>
+<body>
+    <span data-testid="Muneersneh">Muneer Usman</span>
+    <img src="img/slackDisplayImage.jpg" alt="Muneersneh" data-testid="slackDisplayImage">
+    <p>Current day of the week: <span id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek"></span></p>
+    <p>Current UTC time in milliseconds: <span id="currentUTCTime" data-testid="currentUTCTime"></span></p>
+    <span data-testid="myTrack">Frontend</span>
+    <a href="www.github.com/Muneerusman/Slackstageone">Githuburl</a>
+
+    <script>
+    // JavaScript code to display the current day of the week
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDate = new Date();
+    const currentDayIndex = currentDate.getDay();
+    const currentDayOfTheWeek = daysOfWeek[currentDayIndex];
+
+    // Update the HTML element with the current day of the week
+    const currentDayElement = document.getElementById('currentDayOfTheWeek');
+    currentDayElement.textContent = currentDayOfTheWeek;
+
+    // JavaScript code to display the current UTC time in milliseconds
+    const currentUTCTimeInMilliseconds = new Date().getTime();
+
+    // Update the HTML element with the current UTC time in milliseconds
+    const currentUTCTimeElement = document.getElementById('currentUTCTime');
+    currentUTCTimeElement.textContent = currentUTCTimeInMilliseconds;
+    currentUTCTimeElement.setAttribute('data-testid', 'currentUTCTime');
+    </script>
+</body>
+</html>
